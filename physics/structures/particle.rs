@@ -1,7 +1,8 @@
+use bevy::render::render_resource::ShaderType;
 use bytemuck::{Pod, Zeroable};
 
 #[repr(C)]
-#[derive(Clone, Copy, Pod, Zeroable, Default)]
+#[derive(Clone, Copy, Pod, Zeroable, Default, ShaderType)]
 
 pub struct Particle {
     pub pos: [f32; 4],

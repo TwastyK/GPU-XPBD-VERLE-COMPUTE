@@ -1,7 +1,8 @@
+use bevy::render::render_resource::ShaderType;
 use bytemuck::{Pod, Zeroable};
 
 #[repr(C)]
-#[derive(Clone, Copy, Pod, Zeroable)]
+#[derive(Clone, Copy, Pod, Zeroable, ShaderType)]
 
 pub struct DistanceConstraints {
     pub node_a: u32,
